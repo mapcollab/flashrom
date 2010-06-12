@@ -291,7 +291,7 @@ out:
 #else /* CONFIG_INTERNAL_DMI */
 
 #define DMI_COMMAND_LEN_MAX 300
-static const char *dmidecode_command = "dmidecode";
+static const char *dmidecode_command = DMIDECODE_PATH;
 
 static char *get_dmi_string(const char *string_name)
 {
