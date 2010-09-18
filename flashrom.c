@@ -32,7 +32,8 @@
 #include <errno.h>
 #include <ctype.h>
 #include <getopt.h>
-#if HAVE_UTSNAME == 1
+
+#if HAVE_SYS_UTSNAME_H == 1
 #include <sys/utsname.h>
 #endif
 #include "flash.h"
@@ -1699,7 +1700,7 @@ void print_sysinfo(void)
 		msg_ginfo(" (unknown arch)");
 		break;
 	}
-#elif HAVE_UTSNAME == 1
+#elif HAVE_UNAME == 1
 	struct utsname osinfo;
 
 	uname(&osinfo);
