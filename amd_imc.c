@@ -19,8 +19,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
  */
 
-#if defined(__i386__) || defined(__x86_64__)
-
 #include "flash.h"
 #include "programmer.h"
 #include "hwaccess.h"
@@ -155,5 +153,3 @@ int amd_imc_shutdown(struct pci_dev *dev)
 
 	return ret;
 }
-
-#endif

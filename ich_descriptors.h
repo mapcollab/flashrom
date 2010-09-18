@@ -19,7 +19,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
  */
 
-#if defined(__i386__) || defined(__x86_64__)
 #ifndef __ICH_DESCRIPTORS_H__
 #define __ICH_DESCRIPTORS_H__ 1
 
@@ -595,4 +594,3 @@ int getFCBA_component_density(enum ich_chipset cs, const struct ich_descriptors 
 
 #endif /* ICH_DESCRIPTORS_FROM_DUMP */
 #endif /* __ICH_DESCRIPTORS_H__ */
-#endif /* defined(__i386__) || defined(__x86_64__) */

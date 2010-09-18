@@ -22,8 +22,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
  */
 
-#if defined(__i386__) || defined(__x86_64__)
-
 #include <string.h>
 #include <stdlib.h>
 #include "flash.h"
@@ -695,5 +693,3 @@ int sb600_probe_spi(struct pci_dev *dev)
 		register_spi_master(&spi_master_yangtze);
 	return 0;
 }
-
-#endif

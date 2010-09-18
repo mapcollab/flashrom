@@ -26,7 +26,6 @@
  * most OS parport drivers will perform many unnecessary accesses although
  * this driver just treats the parallel port as a GPIO set.
  */
-#if defined(__i386__) || defined(__x86_64__)
 
 #include <stdlib.h>
 #include <strings.h>
@@ -276,7 +275,3 @@ static int dlc5_shutdown(void *data) {
 	OUTB(lpt_outbyte, lpt_iobase);
 	return 0;
 }
-
-#else
-#error PCI port I/O access is not supported on this architecture yet.
-#endif
