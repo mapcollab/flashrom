@@ -1,22 +1,11 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
-Version:	0.9.7
-Release:	3.svn1850%{?dist}
+Version:	0.9.8
+Release:	1.svn1887%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
-#Source0:	http://qa.coreboot.org/releases/%{name}-%{version}.tar.bz2
-#Source1:	http://qa.coreboot.org/releases/%{name}-%{version}.tar.bz2.asc
-## svn -r 1850 export svn://coreboot.org/flashrom/trunk flashrom-0.9.7
-## tar -cjvf flashrom-0.9.7.tar.bz2 flashrom-0.9.7
-Source0:	%{name}-%{version}.tar.bz2
-Patch1:		flashrom-0001-Initial-commit-of-autotools-related-files.patch
-Patch2:		flashrom-0002-Use-dmidecode-path-defined-at-configure-stage.patch
-Patch3:		flashrom-0003-Use-macros-from-configure-stage-instead-of-HAVE_UTSN.patch
-Patch4:		flashrom-0004-Kill-some-x86-related-ifdefs-in-code-this-is-now-con.patch
-Patch5:		flashrom-0005-Use-endiannes-determined-at-the-configure-stage.patch
-Patch6:		flashrom-0006-Use-HAVE_-_H-macro-for-detecting-includes.patch
-Patch7:		flashrom-0007-ppc-hack.patch
+Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	pciutils-devel
