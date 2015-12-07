@@ -68,6 +68,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Dec 07 2015 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 0.9.8-1.svn1887
+- First 0.9.8 release build for MPS
+* Mon Dec 07 2015 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> - 0.9.8-1.svn1887
+- First 0.9.8 release build for MPS
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.9.7-3.svn1850
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
