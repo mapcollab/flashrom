@@ -30,13 +30,6 @@ and write new contents on the chips ("flash the chip").
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
-%patch7 -p1
 
 
 %build
