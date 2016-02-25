@@ -1,7 +1,7 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
 Version:	0.9.8
-Release:	1.svn1887%{?dist}
+Release:	2.svn1887m%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
@@ -68,6 +68,15 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Feb 25 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.8-2.svn1887m
+- spec: disable all programmers except internal (michal.gawlik@thalesgroup.com)
+- autoconf: fix version reported by the tool (michal.gawlik@thalesgroup.com)
+- Rigorously check integrity of I/O stream data.
+  (stefanct@2b7e53f0-3cfb-0310-b3e9-8179ed1497e1)
+- Use nanosleep() instead of usleep() where available.
+  (stefanct@2b7e53f0-3cfb-0310-b3e9-8179ed1497e1)
+- tito: use ReleaseTagger (tomasz.rostanski@thalesgroup.com)
+
 * Mon Dec 07 2015 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 0.9.8-1.svn1887
 - First 0.9.8 release build for MPS
 * Mon Dec 07 2015 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> - 0.9.8-1.svn1887
