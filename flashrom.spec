@@ -9,10 +9,8 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	pciutils-devel
-BuildRequires:	libusb-devel
 BuildRequires:	zlib-devel
 %ifnarch ppc ppc64 %{arm}
-BuildRequires:	libftdi-devel
 BuildRequires:	dmidecode
 Requires:	dmidecode
 %endif
@@ -34,11 +32,13 @@ and write new contents on the chips ("flash the chip").
 
 %build
 autoreconf -ivf
-%if 0%{?el5}
-%configure --with-linux-spi=no
-%else
-%configure --with-ft2232-spi=no --with-usbblaster-spi=no --with-dediprog=yes
-%endif
+%configure --with-internal --without-serprog --without-rayer-spi --without-pony-spi \
+	--without-nic3com --without-gfxnvidia --without-satasii --without-atahpt \
+	--without-atavia --without-it8212 --without-ft2232-spi --without-dummy \
+	--without-drkaiser --without-nicrealtek --without-nicnatsemi \
+	--without-nicintel --without-nicintel-spi --without-nicintel-eeprom \
+	--without-gfxogp --without-buspirate-spi --without-usbblaster-spi \
+	--without-dediprog --without-satamv --without-print-wiki --without-linux-spi
 make %{?_smp_mflags}
 
 
