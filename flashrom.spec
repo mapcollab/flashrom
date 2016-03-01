@@ -1,7 +1,7 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
 Version:	0.9.8
-Release:	2.svn1887m%{?dist}
+Release:	3.svn1887m%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
@@ -60,6 +60,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Mar 01 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.8-3.svn1887m
+- build ich_descriptors_tool and do not install udev rules
+  (michal.gawlik@thalesgroup.com)
+
 * Thu Feb 25 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.8-2.svn1887m
 - spec: disable all programmers except internal (michal.gawlik@thalesgroup.com)
 - autoconf: fix version reported by the tool (michal.gawlik@thalesgroup.com)
