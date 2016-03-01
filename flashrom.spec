@@ -40,16 +40,13 @@ autoreconf -ivf
 	--without-gfxogp --without-buspirate-spi --without-usbblaster-spi \
 	--without-dediprog --without-satamv --without-print-wiki --without-linux-spi
 make %{?_smp_mflags}
+make %{?_smp_mflags} -C util/ich_descriptors_tool
 
 
 %install
 rm -rf %{buildroot}
 make install DESTDIR=%{buildroot}
-%if 0%{?el5}
-install -D -p -m 0644 util/z60_flashrom.rules %{buildroot}/etc/udev/rules.d/z60_flashrom.rules
-%else
-install -D -p -m 0644 util/z60_flashrom.rules %{buildroot}/lib/udev/rules.d/z60_flashrom.rules
-%endif
+install -D -p -m 0755 util/ich_descriptors_tool/ich_descriptors_tool %{buildroot}/usr/sbin/
 
 
 %clean
@@ -58,13 +55,8 @@ rm -rf %{buildroot}
 
 %files
 %doc COPYING README
-%{_sbindir}/%{name}
+%{_sbindir}/*
 %{_mandir}/man8/%{name}.*
-%if 0%{?el5}
-/etc/udev/rules.d/z60_flashrom.rules
-%else
-/lib/udev/rules.d/z60_flashrom.rules
-%endif
 
 
 %changelog
