@@ -133,6 +133,7 @@
 #define ATMEL_ID		0x1F	/* Atmel (now used by Adesto) */
 #define ATMEL_AT25DF021		0x4300
 #define ATMEL_AT25DF041A	0x4401
+#define ATMEL_AT25SF041 	0x8401  /* bhymel - added flash chip used on MPS carrier board */
 #define ATMEL_AT25DF081		0x4502	/* EDI 0x00. AT25DL081 has same ID + EDI 0x0100 */
 #define ATMEL_AT25DF081A	0x4501	/* Yes, 81A has a lower number than 81 */
 #define ATMEL_AT25DF161		0x4602

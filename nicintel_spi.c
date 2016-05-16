@@ -76,6 +76,7 @@
 
 uint8_t *nicintel_spibar;
 
+/* bhymel - added I350 devices */
 const struct dev_entry nics_intel_spi[] = {
 	{PCI_VENDOR_ID_INTEL, 0x105e, OK, "Intel", "82571EB Gigabit Ethernet Controller"},
 	{PCI_VENDOR_ID_INTEL, 0x1076, OK, "Intel", "82541GI Gigabit Ethernet Controller"},
@@ -89,6 +90,11 @@ const struct dev_entry nics_intel_spi[] = {
 	{PCI_VENDOR_ID_INTEL, 0x10f9, NT, "Intel", "82599 10 Gigabit CX4 Dual Port Network Controller"},
 	{PCI_VENDOR_ID_INTEL, 0x10fb, NT, "Intel", "82599 10-Gigabit SFI/SFP+ Network Controller"},
 	{PCI_VENDOR_ID_INTEL, 0x10fc, OK, "Intel", "82599 10 Gigabit XAUI/BX4 Dual Port Network Controller"},
+	{PCI_VENDOR_ID_INTEL, 0x1520, NT, "Intel", "I350 Ethernet Controller Virtual Function"},
+	{PCI_VENDOR_ID_INTEL, 0x1521, NT, "Intel", "I350 Gigabit Network Connection"},
+	{PCI_VENDOR_ID_INTEL, 0x1522, NT, "Intel", "I350 Gigabit Fiber Network Connection"},
+	{PCI_VENDOR_ID_INTEL, 0x1523, NT, "Intel", "I350 Gigabit Backplane Connection"},
+	{PCI_VENDOR_ID_INTEL, 0x1524, NT, "Intel", "I350 Gigabit Connection"},
 	{PCI_VENDOR_ID_INTEL, 0x1517, NT, "Intel", "82599 10 Gigabit KR Network Controller"},
 	{PCI_VENDOR_ID_INTEL, 0x151c, NT, "Intel", "82599 10 Gigabit TN Network Controller"},
 	{PCI_VENDOR_ID_INTEL, 0x1529, NT, "Intel", "82599 10 Gigabit Dual Port Network Controller with FCoE"},
@@ -198,7 +204,9 @@ int nicintel_spi_init(void)
 	if (!io_base_addr)
 		return 1;
 
-	if (dev->device_id < 0x10d8) {
+        /* bhymel - added for i350 */
+	/*if (dev->device_id < 0x10d8) {*/
+        if (dev->device_id < 0x10d8 || (dev->device_id >= 0x1520 && dev->device_id <= 0x1524)) {
 		nicintel_spibar = rphysmap("Intel Gigabit NIC w/ SPI flash", io_base_addr,
 					   MEMMAP_SIZE);
 	} else {
