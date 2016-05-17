@@ -36,7 +36,7 @@ autoreconf -ivf
 	--without-nic3com --without-gfxnvidia --without-satasii --without-atahpt \
 	--without-atavia --without-it8212 --without-ft2232-spi --without-dummy \
 	--without-drkaiser --without-nicrealtek --without-nicnatsemi \
-	--without-nicintel --without-nicintel-spi --without-nicintel-eeprom \
+	--without-nicintel --without-nicintel-eeprom \
 	--without-gfxogp --without-buspirate-spi --without-usbblaster-spi \
 	--without-dediprog --without-satamv --without-print-wiki --without-linux-spi
 make %{?_smp_mflags}
