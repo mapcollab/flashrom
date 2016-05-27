@@ -1,7 +1,7 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
 Version:	0.9.8
-Release:	3.svn1887m%{?dist}
+Release:	4.svn1887m%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
@@ -60,6 +60,11 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri May 27 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.8-4.svn1887m
+- flashrom.spec: enable nicintel-spi needed for i350
+  (tomasz.rostanski@thalesgroup.com)
+- changes to flash i350 flash (bhymel0221@gmail.com)
+
 * Tue Mar 01 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.8-3.svn1887m
 - build ich_descriptors_tool and do not install udev rules
   (michal.gawlik@thalesgroup.com)
