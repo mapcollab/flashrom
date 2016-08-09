@@ -1,4 +1,4 @@
-AC_INIT([flashrom], [0.9.7-r1850], [flashrom@flashrom.org], [flashrom], [http://www.flashrom.org/])
+AC_INIT([flashrom], [0.9.9-r1954], [flashrom@flashrom.org], [flashrom], [http://www.flashrom.org/])
 
 AC_PREREQ(2.59)
 
