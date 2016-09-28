@@ -60,6 +60,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Sep 28 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 0.9.9-1.svn1954
+- updated to 0.9.9 version 
+
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.9.7-3.svn1850
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
