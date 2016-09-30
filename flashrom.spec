@@ -1,7 +1,7 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
 Version:	0.9.9
-Release:	1.svn1954%{?dist}
+Release:	1.svn1954m%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
