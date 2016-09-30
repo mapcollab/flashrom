@@ -1,7 +1,7 @@
 Summary:	Simple program for reading/writing BIOS chips content
 Name:		flashrom
 Version:	0.9.9
-Release:	1.svn1954m%{?dist}
+Release:	2.svn1954m%{?dist}
 License:	GPLv2
 Group:		Applications/System
 URL:		http://flashrom.org
@@ -60,6 +60,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Sep 30 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 0.9.9-2.svn1954m
+- configure.ac: add 'm' suffix to the version number
+  (tomasz.rostanski@thalesgroup.com.pl)
+- flashrom.spec: add 'm' suffix to svn revision since we've patched it
+  (tomasz.rostanski@thalesgroup.com.pl)
+
 * Wed Sep 28 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 0.9.9-1.svn1954
 - updated to 0.9.9 version 
 
